@@ -1,6 +1,5 @@
-def for_loop():
-    for i in range (0,5):
-        print(i)
+def add(i, j):
+    return i + j
 
 
 
