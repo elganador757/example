@@ -11,6 +11,7 @@ def calculator():
     x = 0
     while menu:
         float(x)
+        # Make menu text a single varible in variable file
         print("Select operation.")
         print("1.Add")
         print("2.Subtract")
@@ -18,9 +19,12 @@ def calculator():
         print("4.Divide")
         print("5. Quit")
         choice = input("Enter choice: ")
-        if choice in ('1', '2', '3', '4'):
-            num1 = float(input("Enter a number: "))
+        if choice in ('1', '2', '3', '4'): # use list [] in variables
 
+            # define list of functions 
+            num1 = float(input("Enter a number: "))
+            #functions = [add, subtract, multiply, divide]
+            #x = functions[int(choice)](x, num1)
             if choice == '1':
                 print(x, "+", num1, "=", add(x, num1))
                 x = add(x, num1)
