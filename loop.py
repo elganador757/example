@@ -4,12 +4,12 @@ from functions import divide
 from functions import multiply
 
 total = 0
-x = 0
-
 
 def calculator():
     menu = True
+    x = 0
     while menu:
+        float(x)
         print("Select operation.")
         print("1.Add")
         print("2.Subtract")
@@ -17,34 +17,28 @@ def calculator():
         print("4.Divide")
         print("5. Quit")
         choice = input("Enter choice: ")
-        if choice in ('1', '2', '3', '4','5'):
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
+        if choice in ('1', '2', '3', '4'):
+            num1 = float(input("Enter a number: "))
 
             if choice == '1':
-                x = print(num1, "+", num2, "=", add(num1, num2))
+                x = add(x, num1)
+                print('=', x)
 
             elif choice == '2':
-                x = print(num1, "-", num2, "=", subtract(num1, num2))
+                x = subtract(x, num1)
+                print('=', x)
 
             elif choice == '3':
-                x = print(num1, "*", num2, "=", multiply(num1, num2))
+                x = multiply(x, num1)
+                print('=', x)
 
             elif choice == '4':
-                x = print(num1, "/", num2, "=", divide(num1, num2))
+                x = divide(x, num1)
+                print('=', x)
             
-            elif choice == '5':
-                print(choice)
-                menu = False
-                print("dfjklafdjklj")
-                break
-            else:
-                print(choice)
-                print("else statement")
-                menu = False
-                break 
+            
         elif choice =='5':
-            print('bye')
+            print("Your total is: ", x)
             menu = False
             break
         else:
