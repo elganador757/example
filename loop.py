@@ -20,7 +20,7 @@ def calculator():
         print("4.Divide")
         print("5. Quit")
         choice = input("Enter choice: ")
-        if choice in ('1', '2', '3', '4'): # use list [] in variables
+        if choice in ['1', '2', '3', '4']: # use list [] in variables
 
             # define list of functions 
             num1 = float(input("Enter a number: "))
