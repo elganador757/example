@@ -3,6 +3,7 @@ from functions import subtract
 from functions import divide
 from functions import multiply
 from error_handling import handle_division
+from error_handling import menu_selection_error
 
 total = 0
 
@@ -38,19 +39,19 @@ def calculator():
                 x = multiply(x, num1)
 
             elif choice == '4':
-                if num1 != 0:
+                try:
                     print(x, "/", num1, "=", divide(x, num1))
                     x = divide(x, num1)
-                elif num1 == 0:
+                except:
                     handle_division(num1)
-            
+
             
         elif choice =='5':
             print("Your total is: ", x)
             menu = False
             break
         else:
-            break
+            menu_selection_error(choice)
 
 
 
