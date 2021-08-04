@@ -1,8 +1,7 @@
 
 def menu_selection_error(a): 
-    """if input is a non-empty string, throw an error"""
-    if a < '1' or a > '5':
-             print("'\033[91m'ERROR:'\033[92m'Invalid input! Please select from the menu'\033[0m'")
+    """if input is not a valid menu choice, throw an error"""
+    print("'\033[91m'ERROR:'\033[92m'Invalid input! Please select from the menu'\033[0m'")
 
 
 def handle_division(a):
